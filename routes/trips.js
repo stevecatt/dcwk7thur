@@ -5,7 +5,8 @@ const session = require('express-session')
 const router = express.Router()
 
 let trips = []
-let users = []
+//allows me to access users across all the .js files 
+users = []
 
 router.use(session({
     secret: "keyboard cat",
