@@ -37,7 +37,7 @@
 {{/triplist}}
 
 {{^triplist}}
-no trips here
+Select View saved trips to see if any are saved
 {{/triplist}}
 
 
@@ -45,9 +45,15 @@ no trips here
 
 
 
-</form>
 
+  <h1>Chat</h1>
+    <input type="text" id="chatMessageTextBox"></input>
+    <button id="sendMessageButton">Send</button>
+
+    <ul id="chatMessageList">
+    </ul>
 </body>
 
-
+<script src="/socket.io/socket.io.js"></script>
+  <script src="/js/main.js"></script>
 </html>
