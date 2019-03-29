@@ -49,6 +49,11 @@ app.get('/trips',(req,res) => {
     let usertrips = trips.filter(trip=>trip.sessionid == req.session.username)
     res.render('trips',{triplist: usertrips})
   })
+
+app.post('/show',(req,res) => {
+    let usertrips = trips.filter(trip=>trip.sessionid == req.session.username)
+    res.render('trips',{triplist: usertrips})
+  }) 
 app.post("/trips",(req,res)=>{
     let destination = req.body.destination
     let dateDepart= req.body.dateDepart
